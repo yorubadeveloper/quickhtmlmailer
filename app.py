@@ -13,7 +13,7 @@ app.secret_key = "ITSASECRET" #secret key for username session
 app.config['MAIL_SERVER']='smtp.sendgrid.net' #use gmail
 app.config['MAIL_PORT'] = 587 #mail port
 app.config['MAIL_USERNAME'] = 'apikey' #email
-app.config['MAIL_PASSWORD'] = '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' #password
+app.config['MAIL_PASSWORD'] = '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' #password
 app.config['MAIL_USE_TLS'] = True #security type
 app.config['MAIL_USE_SSL'] = False #security type
 
@@ -32,6 +32,7 @@ def home():
             msg = Message(subject, sender=sender, recipients=[email])
             msg.html = html
             mail.send(msg)
+            print("sent")
         flash("Message sent")
         return render_template("index.html")
     elif request.method == "GET":
