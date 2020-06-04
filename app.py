@@ -10,10 +10,10 @@ app = Flask(__name__) #configure flask
 app.secret_key = "ITSASECRET" #secret key for username session
 
 #setting up mail
-app.config['MAIL_SERVER']='smtp.sendgrid.net' #use gmail
+app.config['MAIL_SERVER']='smtp-relay.sendinblue.com' #use gmail
 app.config['MAIL_PORT'] = 587 #mail port
-app.config['MAIL_USERNAME'] = 'apikey' #email
-app.config['MAIL_PASSWORD'] = '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' #password
+app.config['MAIL_USERNAME'] = 'quickhtmlmailer@gmail.com' #email
+app.config['MAIL_PASSWORD'] = 'cwANTUXOrBkp1tIW' #password
 app.config['MAIL_USE_TLS'] = True #security type
 app.config['MAIL_USE_SSL'] = False #security type
 
