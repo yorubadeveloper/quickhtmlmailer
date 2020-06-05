@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, make_response, session, flash
 from flask_mail import Mail, Message #import mailing system
-
+import os
 import json
 
 import time, threading
@@ -13,7 +13,7 @@ app.secret_key = "ITSASECRET" #secret key for username session
 app.config['MAIL_SERVER']='smtp-relay.sendinblue.com' #use gmail
 app.config['MAIL_PORT'] = 587 #mail port
 app.config['MAIL_USERNAME'] = 'quickhtmlmailer@gmail.com' #email
-app.config['MAIL_PASSWORD'] = 'cwANTUXOrBkp1tIW' #password
+app.config['MAIL_PASSWORD'] = os.environ['MAIL_PASSWORD']
 app.config['MAIL_USE_TLS'] = True #security type
 app.config['MAIL_USE_SSL'] = False #security type
 
